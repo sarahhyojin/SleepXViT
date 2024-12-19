@@ -39,16 +39,18 @@ python3 inter_epoch_prepare.py
 5. Train & Test Inter-epoch ViT
 ```
 python3 inter_train.py
-python3 intra_test.py
+python3 inter_test.py
 ```
 
 ## Interpretability
 ### Inter-Epoch Interpretability
 - Adopted Transformer Interpretability Beyond Attention Visualization (CVPR 2021) [[Github]](https://github.com/hila-chefer/Transformer-Explainability)
 ![Picture2](https://github.com/user-attachments/assets/1f9a1a79-540a-4067-b994-c1082c0ad239)
+- Notebook: 
 
 ### Intra-Epoch Interpretability
 - Adopted same method as above.
 - Using sliding window scheme and aggregated 15 softmax values to predict one Epoch.
 ![InterEpoch](https://github.com/user-attachments/assets/b30fb910-2a6e-43dc-8f43-67644ded9406)
+- Notebook: 
 
