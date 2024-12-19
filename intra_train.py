@@ -14,12 +14,13 @@ import torch.optim as optim
 import torch.optim.lr_scheduler as lr_scheduler
 from sklearn.metrics import f1_score
 
-from dataset import CustomImageDataset
+from dataset import IntraEpochImageDataset, InterEpochImageDataset
 import wandb
 import datetime
 import timm
 from utils import *
 
+DATA_PATH = "./shhs1/"
 
 if __name__ == '__main__':
     tqdm._instances.clear()
@@ -28,13 +29,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # large
-    parser.add_argument('--train_label_path', type=str, default='/home/hjlee/shhs1/train_label_0610.txt')
-    parser.add_argument('--eval_label_path', type=str, default='/home/hjlee/shhs1/valid_label_0610.txt')
-    parser.add_argument('--model_name', type=str, default='SHHS1-0610-')
+    parser.add_argument('--train_label_path', type=str, default=os.path.join(DATA_PATH, "shhs1_train_label.txt"))
+    parser.add_argument('--eval_label_path', type=str, default=os.path.join(DATA_PATH, "shhs1_valid_label.txt"))
+    parser.add_argument('--ckpt_path', type=str, default=os.path.join(DATA_PATH, "shhs1/ckpt/"))
+    parser.add_argument('--model_name', type=str, default='SHHS1-github-')
     parser.add_argument('--epochs', type=int, default=20)
     parser.add_argument('--seed', type=int, default=2)
     parser.add_argument('--workers', type=int, default=8)
-    parser.add_argument('--batch_size', type=int, default=1024)  # use 2 GPUS
+    parser.add_argument('--batch_size', type=int, default=512)  # use 1 GPUS
     parser.add_argument('--lr', type=float, default=1e-5)
     parser.add_argument('--decay', type=float, default=1e-5) # 1e-5 was best
 
@@ -42,7 +44,7 @@ if __name__ == '__main__':
     wandb.config.update(args)
 
     os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-    os.environ["CUDA_VISIBLE_DEVICES"]= "1,3"  # Set the GPU num to use
+    os.environ["CUDA_VISIBLE_DEVICES"]= "3"  # Set the GPU num to use
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     if (device.type == "cuda") and (torch.cuda.device_count() > 1):
         print("Multi GPU activate")
@@ -50,8 +52,8 @@ if __name__ == '__main__':
         print("Device: ", device)
 
     # Dataset
-    train_dataset = SleepImageDataset(args.train_label_path)
-    eval_dataset = SleepImageDataset(args.eval_label_path)
+    train_dataset = IntraEpochImageDataset(args.train_label_path)
+    eval_dataset = IntraEpochImageDataset(args.eval_label_path)
 
     # Set seed
     torch.manual_seed(args.seed)
@@ -65,7 +67,7 @@ if __name__ == '__main__':
     num_classes = 5
     # patch models (weights from official Google JAX impl) pretrained on in21k FT on in1k
     model = timm.create_model('vit_base_patch16_224.orig_in21k_ft_in1k', pretrained=True, num_classes=num_classes)
-    model = nn.DataParallel(model)
+    # model = nn.DataParallel(model)
     model.to(device)
 
     # optimizer = optim.SGD(model.parameters(), lr=1e-4, momentum=0.9, weight_decay=0.03)
@@ -93,7 +95,7 @@ if __name__ == '__main__':
         if val_loss < min_loss:
             print(f'[INFO] val_loss has been improved from {min_loss:.5f} to {val_loss:.5f}. Saving Model!')
             min_loss = val_loss
-            torch.save(model.state_dict(), f'/home/hjlee/shhs/shhs-trained/checkpoint/{model_name}.pth')
+            torch.save(model.state_dict(), os.path.join(args.ckpt_path, f'{model_name}.pth'))
   
         print(f'epoch {epoch+1:02d}, loss: {train_loss:.5f}, acc: {train_acc:.5f}, f1: {train_f1:.5f},\
                 val_loss: {val_loss:.5f}, val_acc: {val_acc:.5f}, val_f1: {val_f1:.5f}')
