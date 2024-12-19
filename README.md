@@ -17,12 +17,30 @@
 
 
 ## Model Architecture
-### Intra-Epoch ViT
+### Intra-epoch ViT
 ![7_a_intra_epoch](https://github.com/user-attachments/assets/52b4ef9e-ab66-4d82-a713-a014e23f5134)
 
-### Inter-Epoch ViT
+### Inter-epoch ViT
 ![7_b_inter_epoch](https://github.com/user-attachments/assets/7fefc057-c0ca-4b3b-82de-f38a09af0d14)
 
+## Usage
+1. Download dataset into /data folder
+2. Convert raw signal images into psg images
+3. Train & Test Intra-epoch ViT
+```
+python3 intra_train.py
+python3 intra_test.py
+```
+4. Extract feature vectors from Intra-epoch ViT
+```
+python3 extract_vectors.py
+python3 inter_epoch_prepare.py
+```
+5. Train & Test Inter-epoch ViT
+```
+python3 inter_train.py
+python3 intra_test.py
+```
 
 ## Interpretability
 ### Inter-Epoch Interpretability
