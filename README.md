@@ -25,7 +25,7 @@
 
 ## Usage
 1. Download dataset into /data folder
-2. Convert raw signal images into psg images
+2. Convert raw signal images into psg images (See /data)
 3. Train & Test Intra-epoch ViT
 ```
 python3 intra_train.py
