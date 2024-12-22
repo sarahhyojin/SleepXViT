@@ -72,7 +72,7 @@ if __name__ == '__main__':
     parser.add_argument('--img_dir', type=str, default=os.path.join(DATA_PATH, "vectors"))
     parser.add_argument('--test_labels', type=str, default=os.path.join(DATA_PATH, "shhs1_test_label.txt"))
     parser.add_argument('--model_name', type=str, default=f'Seq-sliding-{SEQ_LEN}-test-{CUR_DATE}')
-    parser.add_argument('--checkpoint_path', type=str, default=os.path.join(DATA_PATH, "checkpoint/Inter-10-SHHS-2024-12-22.pth")) # use one with relprop
+    parser.add_argument('--checkpoint_path', type=str, default=os.path.join(DATA_PATH, "checkpoint/Inter-10-SHHS1-2024-12-22.pth")) # use one with relprop
     parser.add_argument('--seed', type=int, default=32)
     parser.add_argument('--workers', type=int, default=8)
     parser.add_argument('--batch_size', type=int, default=1024)
