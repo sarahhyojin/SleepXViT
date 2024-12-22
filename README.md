@@ -17,6 +17,9 @@
 
 
 ## Model Architecture
+### Baseline Model
+- SleepTransformer: see sleeptransformer/
+
 ### Intra-epoch ViT
 ![7_a_intra_epoch](https://github.com/user-attachments/assets/52b4ef9e-ab66-4d82-a713-a014e23f5134)
 
