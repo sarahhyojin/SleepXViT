@@ -29,18 +29,18 @@
 2. Convert raw signal images into psg images (See /data)
 3. Train & Test Intra-epoch ViT
 ```
-python3 intra_train.py
-python3 intra_test.py
+$ python3 intra_train.py
+$ python3 intra_test.py
 ```
 4. Extract feature vectors from Intra-epoch ViT
 ```
-python3 extract_vectors.py
-python3 inter_epoch_prepare.py
+$ python3 extract_vectors.py
+$ python3 inter_epoch_prepare.py
 ```
 5. Train & Test Inter-epoch ViT
 ```
-python3 inter_train.py
-python3 inter_test.py
+$ python3 inter_train.py
+$ python3 inter_test.py
 ```
 
 ## Interpretability
@@ -54,3 +54,20 @@ python3 inter_test.py
 - Using sliding window scheme and aggregated seq=10 softmax values to predict one Epoch.
 - Notebook: https://github.com/sarahhyojin/SleepXViT/blob/main/interpretability/Intra_epoch_ViT_interpretability.ipynb
 ![InterEpoch](https://github.com/user-attachments/assets/b30fb910-2a6e-43dc-8f43-67644ded9406)
+
+## Requirements
+Python 3.8 and above.
+```
+numpy==1.24.3
+pandas==2.0.3
+torch==2.1.2
+tqdm==4.65.0
+opencv-python-headless==4.8.1.78
+matplotlib==3.7.2
+scikit-learn==1.3.2
+timm==0.9.12
+```
+
+To install the requirements, use:
+
+$ pip3 install -r requirements.txt
