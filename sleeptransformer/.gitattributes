@@ -1,0 +1,2 @@
+sample/n0002_eeg_test.mat filter=lfs diff=lfs merge=lfs -text
+sample/n0002_eeg.mat filter=lfs diff=lfs merge=lfs -text
