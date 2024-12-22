@@ -24,6 +24,7 @@
 ![7_b_inter_epoch](https://github.com/user-attachments/assets/7fefc057-c0ca-4b3b-82de-f38a09af0d14)
 
 ## Usage
+- Model weights & labels in [Google Drive](https://drive.google.com/drive/folders/1ILZYBwcuSdyNSSg4z9UZ2FciHRs5FwX7?usp=sharing)
 1. Download dataset into /data folder
 2. Convert raw signal images into psg images (See /data)
 3. Train & Test Intra-epoch ViT
