@@ -3,7 +3,7 @@
 It's the repository for SleepTransformer
 - https://ieeexplore.ieee.org/abstract/document/9697331
 
-## How to use
+## Usage
 
 You need to fix the folder paths in all the files.
 
