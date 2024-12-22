@@ -1,0 +1,13 @@
+__pycache__/
+shhs1/ckpt/
+shhs1/20241219_shhs1_labels.ipynb
+shhs1/label_file.tar
+shhs1/shhs1_test_label.txt
+shhs1/shhs1_train_label.txt
+shhs1/shhs1_valid_label.txt
+shhs2/ckpt
+shhs2/20241222_shhs2_labels.ipynb
+shhs2/shhs2_test_label.txt
+shhs2/shhs2_train_label.txt
+shhs2/shhs2_valid_label.txt
+wandb/
