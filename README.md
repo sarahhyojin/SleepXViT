@@ -18,7 +18,7 @@
 
 ## Model Architecture
 ### Baseline Model
-- SleepTransformer: see sleeptransformer/
+- SleepTransformer: see [sleeptransformer/](https://github.com/sarahhyojin/SleepXViT/tree/main/sleeptransformer)
 
 ### Intra-epoch ViT
 ![7_a_intra_epoch](https://github.com/user-attachments/assets/52b4ef9e-ab66-4d82-a713-a014e23f5134)
@@ -49,13 +49,13 @@ $ python3 inter_test.py
 ## Interpretability
 ### Intra-Epoch Interpretability
 - Adopted Transformer Interpretability Beyond Attention Visualization (CVPR 2021) [[Github]](https://github.com/hila-chefer/Transformer-Explainability)
-- Notebook: https://github.com/sarahhyojin/SleepXViT/blob/main/interpretability/Inter_epoch_ViT_interpretability.ipynb
+- [Notebook](https://github.com/sarahhyojin/SleepXViT/blob/main/interpretability/Inter_epoch_ViT_interpretability.ipynb)
 ![Picture2](https://github.com/user-attachments/assets/1f9a1a79-540a-4067-b994-c1082c0ad239)
 
 ### Inter-Epoch Interpretability
 - Adopted same method as above.
 - Using sliding window scheme and aggregated seq=10 softmax values to predict one Epoch.
-- Notebook: https://github.com/sarahhyojin/SleepXViT/blob/main/interpretability/Intra_epoch_ViT_interpretability.ipynb
+- [Notebook](https://github.com/sarahhyojin/SleepXViT/blob/main/interpretability/Intra_epoch_ViT_interpretability.ipynb)
 ![InterEpoch](https://github.com/user-attachments/assets/b30fb910-2a6e-43dc-8f43-67644ded9406)
 
 ## Requirements
