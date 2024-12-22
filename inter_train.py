@@ -36,7 +36,7 @@ if __name__ == '__main__':
     parser.add_argument('--workers', type=int, default=8)
     parser.add_argument('--batch_size', type=int, default=2048)
     parser.add_argument('--num_seq', type=int, default=SEQ_LEN)
-    parser.add_argument('--lr', type=float, default=1e-5) # 1e-4
+    parser.add_argument('--lr', type=float, default=1e-4) # 1e-4
     parser.add_argument('--decay', type=float, default=1e-8)
     args=parser.parse_args()
     wandb.config.update(args)
