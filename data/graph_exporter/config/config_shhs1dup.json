@@ -1,0 +1,290 @@
+{
+	"size": {
+		"width": 1920,
+		"height": 1080
+	},
+	"strokeWidth": 1,
+	"filetype": "png",
+	"epochLength": 30,
+	"signalGroups": [
+		[
+			{
+				"id": 1,
+				"name": "None",
+				"height": 43,
+				"min": -1.2,
+				"max": 1.2,
+				"unit": "g",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "1"
+			},
+			{
+				"id": 2,
+				"name": "None",
+				"height": 43,
+				"min": -1.2,
+				"max": 1.2,
+				"unit": "g",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "1"
+			},
+			{
+				"id": 3,
+				"name": "None",
+				"height": 43,
+				"min": -1.2,
+				"max": 1.2,
+				"unit": "g",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "1"
+			}
+		],
+		[
+			{
+				"id": 4,
+				"name": "^EEG\\(sec\\)$",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			},
+			{
+				"id": 5,
+				"name": "^EEG$",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			},
+			{
+				"id": 6,
+				"name": "^EEG\\(sec\\)$",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			},
+			{
+				"id": 7,
+				"name": "^EEG$",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			}
+		],
+		[
+			{
+				"id": 8,
+				"name": "EOG\\(L\\)",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.3,
+				"lp": 16,
+				"bs": null,
+				"group": "3"
+			},
+			{
+				"id": 9,
+				"name": "EOG\\(R\\)",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.3,
+				"lp": 16,
+				"bs": null,
+				"group": "3"
+			}
+		],
+		[
+			{
+				"id": 10,
+				"name": "EMG",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 10,
+				"lp": 62.5,
+				"bs": 60,
+				"group": "4"
+			}
+		],
+		[
+			{
+				"id": 11,
+				"name": "ECG",
+				"height": 43,
+				"min": -0.0005,
+				"max": 0.0005,
+				"unit": "V",
+				"hp": 0.3,
+				"lp": 62.5,
+				"bs": 60,
+				"group": "5"
+			}
+		],
+		[
+			{
+				"id": 12,
+				"name": ".*([Aa][Uu][Xx]|[Nn][Ee][Ww]|[Aa][Ii][Rr]|[Aa]\\/[Ff]).*",
+				"height": 129,
+				"min": -0.0001,
+				"max": 0.0001,
+				"unit": "V",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "6"
+			}
+		],
+		[
+			{
+				"id": 13,
+				"name": ".*([Aa][Uu][Xx]|[Nn][Ee][Ww]|[Aa][Ii][Rr]|[Aa]\\/[Ff]).*",
+				"height": 43,
+				"min": -0.0001,
+				"max": 0.0001,
+				"unit": "V",
+				"hp": 0.1,
+				"lp": null,
+				"bs": null,
+				"group": "7"
+			}
+		],
+		[
+			{
+				"id": 14,
+				"name": "THOR RES",
+				"height": 43,
+				"min": -1.5,
+				"max": 1.5,
+				"unit": "V",
+				"hp": 0.1,
+				"lp": null,
+				"bs": null,
+				"group": "8"
+			},
+			{
+				"id": 15,
+				"name": "ABDO RES",
+				"height": 43,
+				"min": -1.5,
+				"max": 1.5,
+				"unit": "V",
+				"hp": 0.1,
+				"lp": null,
+				"bs": null,
+				"group": "8"
+			}
+		],
+		[
+			{
+				"id": 16,
+				"name": "None",
+				"height": 43,
+				"min": -0.3,
+				"max": 0.3,
+				"unit": "cmH2O",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "9"
+			}
+		],
+		[
+			{
+				"id": 17,
+				"name": "None",
+				"height": 43,
+				"min": 30,
+				"max": 130,
+				"unit": "dB",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "10"
+			}
+		],
+		[
+			{
+				"id": 18,
+				"name": "None",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 10,
+				"lp": 70,
+				"bs": 60,
+				"group": "11"
+			},
+			{
+				"id": 19,
+				"name": "None",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 10,
+				"lp": 70,
+				"bs": 60,
+				"group": "11"
+			}
+		],
+		[
+			{
+				"id": 20,
+				"name": "SaO2",
+				"height": 86,
+				"min": 85,
+				"max": 100,
+				"unit": "%",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "12"
+			}
+		],
+		[
+			{
+				"id": 21,
+				"name": "SaO2",
+				"height": 86,
+				"min": 40,
+				"max": 100,
+				"unit": "%",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "13"
+			}
+		]
+	],
+	"epochType": "round30s"
+}

@@ -1,0 +1,278 @@
+{
+	"size": {
+		"width": 1920,
+		"height": 1080
+	},
+	"strokeWidth": 1,
+	"filetype": "png",
+	"epochLength": 30,
+	"signalGroups": [
+		[
+			{
+				"id": 1,
+				"name": "Gravity X",
+				"height": 43,
+				"min": -1.2,
+				"max": 1.2,
+				"unit": "g",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "1"
+			},
+			{
+				"id": 2,
+				"name": "Gravity Y",
+				"height": 43,
+				"min": -1.2,
+				"max": 1.2,
+				"unit": "g",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "1"
+			}
+		],
+		[
+			{
+				"id": 4,
+				"name": "C3-A2",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			},
+			{
+				"id": 5,
+				"name": "C4-A1",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			},
+			{
+				"id": 6,
+				"name": "O1-A2",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			},
+			{
+				"id": 7,
+				"name": "O2-A1",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.5,
+				"lp": 35,
+				"bs": 60,
+				"group": "2"
+			}
+		],
+		[
+			{
+				"id": 8,
+				"name": "Left-A2",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.3,
+				"lp": 35,
+				"bs": 60,
+				"group": "3"
+			},
+			{
+				"id": 9,
+				"name": "Right-A1",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 0.3,
+				"lp": 35,
+				"bs": 60,
+				"group": "3"
+			}
+		],
+		[
+			{
+				"id": 10,
+				"name": "Chin|EMG\\.",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 10,
+				"lp": 70,
+				"bs": 60,
+				"group": "4"
+			}
+		],
+		[
+			{
+				"id": 11,
+				"name": "EKG",
+				"height": 43,
+				"min": -0.0005,
+				"max": 0.0005,
+				"unit": "V",
+				"hp": 0.3,
+				"lp": 70,
+				"bs": 60,
+				"group": "5"
+			}
+		],
+		[
+			{
+				"id": 12,
+				"name": "Flow",
+				"height": 129,
+				"min": -0.6,
+				"max": 0.6,
+				"unit": "L/s",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "6"
+			}
+		],
+		[
+			{
+				"id": 13,
+				"name": "Thermistor",
+				"height": 43,
+				"min": -0.0005,
+				"max": 0.0005,
+				"unit": "V",
+				"hp": 0.1,
+				"lp": null,
+				"bs": null,
+				"group": "7"
+			}
+		],
+		[
+			{
+				"id": 14,
+				"name": "Thorax",
+				"height": 43,
+				"min": -0.00015,
+				"max": 0.00015,
+				"unit": "V",
+				"hp": 0.1,
+				"lp": null,
+				"bs": null,
+				"group": "8"
+			},
+			{
+				"id": 15,
+				"name": "Abdomen",
+				"height": 43,
+				"min": -0.00015,
+				"max": 0.00015,
+				"unit": "V",
+				"hp": 0.1,
+				"lp": null,
+				"bs": null,
+				"group": "8"
+			}
+		],
+		[
+			{
+				"id": 16,
+				"name": "Snore|Derived Snore",
+				"height": 43,
+				"min": -0.0002,
+				"max": 0.0002,
+				"unit": "bar",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "9"
+			}
+		],
+		[
+			{
+				"id": 17,
+				"name": "Snoring Sensor",
+				"height": 43,
+				"min": 0,
+				"max": 0.0005,
+				"unit": "V",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "10"
+			}
+		],
+		[
+			{
+				"id": 18,
+				"name": "[Ll][Ee][Gg]-*\\s*[Ll]",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 10,
+				"lp": 70,
+				"bs": 60,
+				"group": "11"
+			},
+			{
+				"id": 19,
+				"name": "[Ll][Ee][Gg]-*\\s*[Rr]",
+				"height": 43,
+				"min": -0.000035,
+				"max": 0.000035,
+				"unit": "V",
+				"hp": 10,
+				"lp": 70,
+				"bs": 60,
+				"group": "11"
+			}
+		],
+		[
+			{
+				"id": 20,
+				"name": "SpO2",
+				"height": 86,
+				"min": 85,
+				"max": 100,
+				"unit": "%",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "12"
+			}
+		],
+		[
+			{
+				"id": 21,
+				"name": "SpO2",
+				"height": 86,
+				"min": 40,
+				"max": 100,
+				"unit": "%",
+				"hp": null,
+				"lp": null,
+				"bs": null,
+				"group": "13"
+			}
+		]
+	],
+	"epochType": "round30s"
+}

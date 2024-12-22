@@ -1,0 +1,24 @@
+{
+  "name": "iir1",
+  "version": "0.3.3",
+  "description": "NodeJS binding of IIR1 - IIR Realtime Filter Library",
+  "main": "index.js",
+  "repository": "https://gitlab.com/kongdole/iir1.js",
+  "author": "Ray Suhyun Lee <raysuhyunlee@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "gypfile": true,
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean",
+    "test": "jasmine test/*.js"
+  },
+  "devDependencies": {
+    "jasmine": "^3.6.2",
+    "node-gyp": "^7.1.1"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^3.0.2"
+  }
+}

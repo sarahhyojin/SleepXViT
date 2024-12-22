@@ -1,0 +1,1 @@
+docker build -t graph-exporter-convert . && docker run -it --name graph-exporter-convert -e TYPE=nx -v ~/test_input:/input -v ~/test_output:/output graph-exporter-convert

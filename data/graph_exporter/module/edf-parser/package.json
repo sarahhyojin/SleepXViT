@@ -1,0 +1,37 @@
+{
+  "name": "edf-parser",
+  "version": "0.2.4",
+  "description": "Edf parser",
+  "main": "src/main.js",
+  "keywords": [
+    "edf",
+    "parser"
+  ],
+  "author": "Yehezkel (Amed) Reyes",
+  "email": "areyes@nerd.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/yehezkel/edf-parser.git"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/yehezkel/edf-parser/issues",
+    "email": "yejezkel.rp@gmail.com"
+  },
+  "directories": {
+    "example": "sample"
+  },
+  "devDependencies": {
+    "blanket": "^1.2.3",
+    "memorystream": "^0.3.1",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3"
+  },
+  "scripts": {
+    "test": "mocha tests/ --recursive",
+    "test-coverage": "nyc --reporter=text mocha tests/ --recursive"
+  },
+  "nyc": {
+    "exclude": "tests"
+  }
+}
