@@ -5,14 +5,9 @@ import argparse
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 from torch.utils.data import DataLoader
-from torchvision import models
-from torchvision import datasets, transforms
-from torchvision.transforms import ToTensor, CenterCrop
 import torch.optim as optim
 import torch.optim.lr_scheduler as lr_scheduler
-from sklearn.metrics import f1_score
 
 from dataset import IntraEpochImageDataset, InterEpochImageDataset
 import wandb
@@ -31,13 +26,13 @@ if __name__ == '__main__':
     # large
     parser.add_argument('--train_label_path', type=str, default=os.path.join(DATA_PATH, "shhs1_train_label.txt"))
     parser.add_argument('--eval_label_path', type=str, default=os.path.join(DATA_PATH, "shhs1_valid_label.txt"))
-    parser.add_argument('--ckpt_path', type=str, default=os.path.join(DATA_PATH, "shhs1/ckpt/"))
+    parser.add_argument('--ckpt_path', type=str, default=os.path.join(DATA_PATH, "ckpt/"))
     parser.add_argument('--model_name', type=str, default='SHHS1-github-')
     parser.add_argument('--epochs', type=int, default=20)
     parser.add_argument('--seed', type=int, default=2)
     parser.add_argument('--workers', type=int, default=8)
     parser.add_argument('--batch_size', type=int, default=512)  # use 1 GPUS
-    parser.add_argument('--lr', type=float, default=1e-5)
+    parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--decay', type=float, default=1e-5) # 1e-5 was best
 
     args=parser.parse_args()

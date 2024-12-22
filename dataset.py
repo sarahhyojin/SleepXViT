@@ -9,6 +9,7 @@ import pandas as pd
 from torch.utils.data import Dataset
 import torch
 from torchvision import datasets, transforms
+import ast
 
 DATA_PATH = "./shhs1/"
 IMG_PATH = "/home/hjlee/shhs1/SHHS1_duplicated_IMG/"
@@ -79,7 +80,7 @@ class InterEpochImageDataset(Dataset):
     def __init__(self, img_path, label_path):
         self.img_path = img_path
         self.label_path = label_path
-        df = pd.read_csv(label_path, sep="\t", header=None)
+        df = pd.read_csv(label_path, header=None)
         self.labels = dict(zip(df[0], df[1])) # file_name and labels
         self.image_filenames = list(self.labels.keys())
 
@@ -92,3 +93,23 @@ class InterEpochImageDataset(Dataset):
         labels = torch.tensor(ast.literal_eval(self.labels[image_path]))
 
         return images, labels
+
+
+class ExtractVectorDataset(Dataset):
+    def __init__(self, annotations_file):
+        df = pd.read_csv(annotations_file, header=None)
+        self.labels = dict(zip(df[0], df[1]))
+        self.image_path = list(self.labels.keys())
+
+    def __len__(self):
+        return len(self.labels)
+
+    def __getitem__(self, idx):
+        # bring the image from corresponding location
+        img_path = os.path.join(IMG_PATH, self.image_path[idx])
+        label = int(self.labels[self.image_path[idx]])
+        
+        # process the image
+        image = torch.from_numpy(transform(img_path))
+
+        return image, label, img_path
