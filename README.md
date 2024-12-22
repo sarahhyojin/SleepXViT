@@ -69,5 +69,6 @@ timm==0.9.12
 ```
 
 To install the requirements, use:
-
+```
 $ pip3 install -r requirements.txt
+```
