@@ -42,7 +42,7 @@ print(f"Converted {mat_file} to {edf_file}")
 - Open the EDF data file to verify channel names and types.
 - Create a custom configuration file for adjusting channel positions.
 
-3. 3. Build and run the container
+3. Build and run the container
 - For KISS dataset
 ```bash
 docker build -t graph-exporter-convert . && \
