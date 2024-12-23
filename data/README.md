@@ -1,5 +1,5 @@
 ## How to use Graph Exporter
-1. Convert raw data to EDF (if not already in EDF format)
+1. (if not already in EDF format) Convert non-EDF format data to EDF
 - Use the WFDB package to read MATLAB files.
 - Use the `EdfWriter` function from the `pyedflib` package to convert them into EDF format.
 ```
